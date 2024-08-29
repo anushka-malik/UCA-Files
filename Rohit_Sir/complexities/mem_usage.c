@@ -12,7 +12,6 @@ void print_memory_usage(const char *label)
 
 int main()
 {
-    struct rusage start, end;
 
     // Print initial memory usage
     print_memory_usage("Initial");
