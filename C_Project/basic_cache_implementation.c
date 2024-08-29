@@ -53,15 +53,15 @@
 	 printf("%d\n",retrieve(basic_cache,104));
 	 printf("%d\n",basic_cache->size);
 
-	 end=clock();
-
-	 double diff=((double)(end-start))/CLOCKS_PER_SEC;
-	 printf("Time utilized = %f seconds\n",diff);
          struct rusage usage_end;
 	 getrusage(RUSAGE_SELF,&usage_end);
 
 	 long mem_used=usage_end.ru_maxrss -  usage_start.ru_maxrss;
 	 printf("Memory used : %ld KB \n",mem_used);
+	 
+	 end=clock();
+	 double diff=((double)(end-start))/CLOCKS_PER_SEC;
+	 printf("Time utilized = %f seconds\n",diff);
 
          for(int i=0;i<MAX_CAP;i++)
 	 {
