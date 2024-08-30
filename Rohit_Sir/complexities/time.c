@@ -12,7 +12,7 @@ int main()
 
    long long int sum=0;
 
-   for(int i=0;i<10000;i++)
+   for(int i=0;i<20000;i++)
            sum+=i;
    end=clock();
    double time_used=(double)(end-start)/(CLOCKS_PER_SEC);
