@@ -1,0 +1,17 @@
+Thread -> a special process that share same virtual address space but the execution context differs.
+
+Thread is a lightweight process and each thread run parallely.
+
+shared_list l;   // {}
+t=fork(list_insert(l,1));
+t2=fork(list_insert(l,3));
+list_insert(l,2);
+wait(t);
+wait(t2);
+
+print(list);   // {1,2,3} ,{2,1,3},{1,3},{2,3},{3},{1} race condition
+
+list_insert(shared_list l, int i)
+{
+  shared_list.add(i);
+}
