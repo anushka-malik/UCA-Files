@@ -28,10 +28,10 @@ void check_malloc(int n)
 // custom calloc function using malloc function.
 void* custom_calloc(int n,int size)
 {
-    int* ptr=(int*)malloc(n*size);
+    char* ptr=(char*)malloc(n*size);
     for(int i=0;i<n;i++)
     {
-        *(ptr+i)=0;
+        *(ptr+i)='\0';
     }
     return (void*)ptr;
 }
@@ -42,10 +42,10 @@ int main()
     scanf("%d",&n);
     // check_calloc(n);
     // check_malloc(n);
-    int* ptr=(int*)custom_calloc(n,sizeof(int));
+    char* ptr=(char*)custom_calloc(n,sizeof(char));
     for(int i=0;i<n;i++)
     {
-        printf("%d\n",*(ptr+i));
+        printf("%c\n",*(ptr+i));
     }
     
     return 0;
