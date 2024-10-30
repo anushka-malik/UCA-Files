@@ -8,12 +8,12 @@ void bin()
     printf("File cannot be opened");
     exit(1);
   }
-  char str[20];
+  char str[40];
   fgets(str,sizeof(str),stdin);
   
   fwrite(&str,sizeof(str),1,file);
   rewind(file);
-  char str2[20];
+  char str2[40];
     fread(&str2,sizeof(str2),1,file);
  
     printf("read string:%s",str2);
