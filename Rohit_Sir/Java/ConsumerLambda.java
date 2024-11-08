@@ -11,12 +11,12 @@ public class ConsumerLambda {
         consume.accept(10);
 
         // consumer to display an array
-        Consumer<ArrayList<Integer>> dispList=(li)->{
+        Consumer<DemoArrayList<Integer>> dispList=(li)->{
             for(Integer val:li)
             System.out.print(val+" ");
         };
 
-        ArrayList<Integer> li=new ArrayList<Integer>();
+        DemoArrayList<Integer> li=new DemoArrayList<Integer>();
         System.out.println("enter n:");
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
